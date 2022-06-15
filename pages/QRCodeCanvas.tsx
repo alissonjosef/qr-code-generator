@@ -8,7 +8,7 @@ interface Props {
 
 function QRCodeCanvas ({text}: Props)  {
 
-    const canvasRef = useRef<HTMLCanvasElement | null>()
+    const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
     useEffect(() => {
         QRCode.toCanvas(canvasRef.current, text,{width:500},(error) => {
